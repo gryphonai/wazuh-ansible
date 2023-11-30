@@ -27,7 +27,7 @@
 
 - name: RedHat/CentOS/Fedora | Install openscap
   package: "name={{ item }} state=present"
-  with_items: "{{ wazuh_agent_config.openscap.packages.RedHat }}"
+  with_items: "{{ wazuh_manager_config.openscap.packages.RedHat }}"
   register: wazuh_manager_openscp_packages_installed
   until: wazuh_manager_openscp_packages_installed is succeeded
   tags:
