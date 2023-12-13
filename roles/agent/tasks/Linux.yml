@@ -229,6 +229,18 @@
     - init
     - config
 
+- name: Linux | Install the GCP auth key file
+  copy:
+    content: "{{ wazuh_agent_config.gcp_pubsub.credentials }}"
+    dest: /var/ossec/wodles/gcloud/credentials.json
+    owner: root
+    group: wazuh
+    mode: 0644
+  when: wazuh_agent_config.gcp_pubsub.enabled == 'yes'
+  tags:
+    - init
+    - config
+
 - name: Linux | Installing local_internal_options.conf
   template:
     src: var-ossec-etc-local-internal-options.conf.j2
