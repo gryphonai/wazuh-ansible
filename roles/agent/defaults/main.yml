@@ -354,6 +354,15 @@ wazuh_agent_active_response:
 ## Logging
 wazuh_agent_log_format: 'plain'
 
+## GCP Pubsub
+wazuh_agent_gcp_pubsub:
+  enabled: 'no'
+  pull_on_start: 'yes'
+  interval: 1m
+  project_id:
+  subscription_name:
+  credentials:
+
 # wazuh_agent_config
 wazuh_agent_config_defaults:
   repo: '{{ wazuh_repo }}'
@@ -373,3 +382,5 @@ wazuh_agent_config_defaults:
 
   labels: '{{ wazuh_agent_labels }}'
   enrollment: '{{ wazuh_agent_enrollment }}'
+
+  gcp_pubsub: '{{ wazuh_agent_gcp_pubsub }}'
