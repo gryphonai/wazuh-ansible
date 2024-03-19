@@ -362,6 +362,7 @@ wazuh_agent_gcp_pubsub:
   project_id:
   subscription_name:
   credentials:
+  credentials_path:
   num_threads: 1
   max_messages: 100
 
