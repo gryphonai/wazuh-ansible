@@ -235,10 +235,20 @@
     - init
     - config
 
+
+- name: Creates the GCP Auth Directory
+  file:
+    path: "{{ wazuh_agent_config.gcp_pubsub.credentials_path }}"
+    state: directory
+    owner: root
+    group: wazuh
+    mode: 0775
+    recurse: yes
+
 - name: Linux | Install the GCP auth key file
   copy:
     content: "{{ wazuh_agent_config.gcp_pubsub.credentials }}"
-    dest: /var/ossec/wodles/gcloud/credentials.json
+    dest: "{{ wazuh_agent_config.gcp_pubsub.credentials_path }}/credentials.json"
     owner: root
     group: wazuh
     mode: 0644

@@ -186,7 +186,7 @@
       <interval>{{ wazuh_agent_config.gcp_pubsub.interval }}</interval>
       <project_id>{{ wazuh_agent_config.gcp_pubsub.project_id }}</project_id>
       <subscription_name>{{ wazuh_agent_config.gcp_pubsub.subscription_name }}</subscription_name>
-      <credentials_file>/var/ossec/wodles/gcloud/credentials.json</credentials_file>
+      <credentials_file>{{ wazuh_agent_config.gcp_pubsub.credentials_path }}/credentials.json</credentials_file>
       <num_threads>{{ wazuh_agent_config.gcp_pubsub.num_threads }}</num_threads>
       <max_messages>{{ wazuh_agent_config.gcp_pubsub.max_messages }}</max_messages>
   </gcp-pubsub>
