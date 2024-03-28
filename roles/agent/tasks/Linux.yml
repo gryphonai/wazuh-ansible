@@ -244,6 +244,7 @@
     group: wazuh
     mode: 0775
     recurse: yes
+  when: wazuh_agent_config.gcp_pubsub.enabled == 'yes'
 
 - name: Linux | Install the GCP auth key file
   copy:
