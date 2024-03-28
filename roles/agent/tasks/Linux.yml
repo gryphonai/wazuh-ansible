@@ -224,6 +224,7 @@
     owner: root
     group: wazuh
     mode: 0644
+    force: true
   notify: restart wazuh-agent
   tags:
     - init
@@ -259,6 +260,7 @@
     owner: root
     group: wazuh
     mode: 0640
+    force: true
   notify: restart wazuh-agent
   tags:
     - init
@@ -271,6 +273,7 @@
     owner: wazuh
     group: wazuh
     mode: 0640
+    force: true
   when:
     - wazuh_agent_config.enrollment.enabled == 'yes'
     - wazuh_agent_config.enrollment.authorization_pass_path | length > 0
