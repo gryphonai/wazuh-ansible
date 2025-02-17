@@ -99,7 +99,7 @@ These playbooks install and configure Wazuh agent, manager and indexer and dashb
     │ │ ├── wazuh-single.yml
     │
     │ ├── README.md
-    │ ├── VERSION
+    │ ├── VERSION.json
     │ ├── CHANGELOG.md
 
 ## Example: production-ready distributed environment
