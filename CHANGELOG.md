@@ -1,23 +1,59 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
-## [v5.0.0]
+## [4.11.2]
 
 ### Added
 
-- Update to [Wazuh v5.0.0](https://github.com/wazuh/wazuh/blob/v5.0.0/CHANGELOG.md#500)
-- Enhance PR check workflows (All-in-one and Distributed) ([#1457](https://github.com/wazuh/wazuh-ansible/pull/1457)) \- (Workflows)
+- None
 
 ### Changed
 
-- Adapt existing workflows to new allocator YAML inventory ([#1561](https://github.com/wazuh/wazuh-ansible/pull/1561)) \- (Workflows)
-- Update AWS credentials actions in GHA workflows to use 'v4' instead of 'v3' ([#1492](https://github.com/wazuh/wazuh-ansible/pull/1492)) \- (Workflows)
+- None
 
-## [v4.10.2]
+### Fixed
+
+- None
+
+### Deleted
+
+- None
+
+## [4.11.1]
 
 ### Added
 
-- Update to [Wazuh v4.10.2](https://github.com/wazuh/wazuh/blob/v4.10.2/CHANGELOG.md#v4101)
+- None
+
+### Changed
+
+- None
+
+### Fixed
+
+- None
+
+### Deleted
+
+- None
+
+## [4.11.0]
+
+### Added
+
+- None
+
+### Changed
+
+- Add Yum lock timeout to Ansible task ([#1511](https://github.com/wazuh/wazuh-ansible/pull/1511))
+
+### Fixed
+
+- None
+
+### Deleted
+
+- None
 
 ## [v4.10.1]
 
@@ -30,6 +66,10 @@ All notable changes to this project will be documented in this file.
 ### Added
 
 - Update to [Wazuh v4.10.0](https://github.com/wazuh/wazuh/blob/v4.10.0/CHANGELOG.md#v4100)
+
+### Fixed
+
+- Fix cert gen tool version variable assignment ([#1443](https://github.com/wazuh/wazuh-ansible/pull/1443))
 
 ## [v4.9.2]
 

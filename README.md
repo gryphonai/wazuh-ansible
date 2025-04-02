@@ -9,15 +9,16 @@ These playbooks install and configure Wazuh agent, manager and indexer and dashb
 
 ## Branches
 
-- `main` branch contains the latest code, be aware of possible bugs on this branch.
+- `master` branch contains the latest code, be aware of possible bugs on this branch.
 - `stable` branch on correspond to the last Wazuh stable version.
 
 ## Compatibility Matrix
 
 | Wazuh version | Elastic | ODFE   |
 |---------------|---------|--------|
-| v5.0.0        |         |        |
-| v4.10.2       |         |        |
+| v4.11.2       |         |        |
+| v4.11.1       |         |        |
+| v4.11.0       |         |        |
 | v4.10.1       |         |        |
 | v4.10.0       |         |        |
 | v4.9.2        |         |        |
@@ -98,7 +99,7 @@ These playbooks install and configure Wazuh agent, manager and indexer and dashb
     │ │ ├── wazuh-single.yml
     │
     │ ├── README.md
-    │ ├── VERSION.json
+    │ ├── VERSION
     │ ├── CHANGELOG.md
 
 ## Example: production-ready distributed environment
@@ -207,10 +208,10 @@ The hereunder example playbook uses the `wazuh-ansible` role to provision a prod
       roles:
         - role: "../roles/wazuh/ansible-wazuh-manager"
         - role: "../roles/wazuh/ansible-filebeat-oss"
+          filebeat_node_name: node-4
       become: yes
       become_user: root
       vars:
-        filebeat_node_name: node-4
         wazuh_manager_config:
           connection:
               - type: 'secure'
@@ -239,10 +240,10 @@ The hereunder example playbook uses the `wazuh-ansible` role to provision a prod
       roles:
         - role: "../roles/wazuh/ansible-wazuh-manager"
         - role: "../roles/wazuh/ansible-filebeat-oss"
+          filebeat_node_name: node-5
       become: yes
       become_user: root
       vars:
-        filebeat_node_name: node-5
         wazuh_manager_config:
           connection:
               - type: 'secure'

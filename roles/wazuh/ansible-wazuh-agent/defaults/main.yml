@@ -1,6 +1,5 @@
 ---
-wazuh_agent_version: 5.0.0
-
+wazuh_agent_version: 4.11.2
 # Custom packages installation
 
 wazuh_custom_packages_installation_agent_enabled: false
@@ -65,7 +64,7 @@ wazuh_managers:
     retry_interval: 5
     register: yes
 
-## Authentication Method: Enrollment section (5.x)
+## Authentication Method: Enrollment section (4.x)
 
 # For more information see:
 # * https://documentation.wazuh.com/current/user-manual/reference/ossec-conf/client.html#enrollment
