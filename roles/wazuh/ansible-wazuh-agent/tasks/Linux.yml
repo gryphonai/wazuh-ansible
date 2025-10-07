@@ -224,6 +224,7 @@
     owner: root
     group: wazuh
     mode: 0644
+    force: true
   notify: restart wazuh-agent
   tags:
     - init
@@ -236,6 +237,7 @@
     owner: root
     group: wazuh
     mode: 0640
+    force: true
   notify: restart wazuh-agent
   tags:
     - init
@@ -247,6 +249,7 @@
     dest: "{{ wazuh_dir }}/etc/authd.pass"
     owner: wazuh
     group: wazuh
+    force: true
     mode: 0640
   when:
     - wazuh_agent_config.enrollment.enabled == 'yes'
